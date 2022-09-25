@@ -64,8 +64,11 @@ const List = () => {
                     type="number"
                     className="lsOptionInput"
                     placeholder={options.adult}
-                    step="1"
+                    step={1}
                     min={1}
+                    // onChange={(e) => {
+                    //   setOptions({ ...options, adult: e.target.value });
+                    // }}
                   />
                 </div>
                 <div className="lsOptionItem">
@@ -74,8 +77,10 @@ const List = () => {
                     type="number"
                     className="lsOptionInput"
                     placeholder={options.children}
-                    step="1"
                     min={0}
+                    // onChange={(e) =>
+                    //   setOptions({ ...options, children: e.target.value })
+                    // }
                   />
                 </div>
                 <div className="lsOptionItem">
@@ -84,8 +89,11 @@ const List = () => {
                     type="number"
                     className="lsOptionInput"
                     placeholder={options.room}
-                    step="1"
+                    step={1}
                     min={1}
+                    // onChange={(e) =>
+                    //   setOptions({ ...options, room: e.target.value })
+                    // }
                   />
                 </div>
               </div>
