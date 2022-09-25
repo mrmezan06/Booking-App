@@ -1,0 +1,27 @@
+.header {
+  background-color: #003580;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 0px 100px 0px;
+}
+
+.headerList {
+  display: flex;
+  gap: 40px;
+}
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerListItem.active {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
