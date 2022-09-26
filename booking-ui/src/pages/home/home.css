@@ -6,6 +6,10 @@
   gap: 30px;
 }
 
+.homeContainer:last-child {
+  gap: 0;
+}
+
 .homeTitle {
   width: 1024px;
   font-size: 20px;
