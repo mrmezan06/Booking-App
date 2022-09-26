@@ -22,8 +22,11 @@ app.listen(process.env.PORT, async () => {
 
 // Middlewares
 app.use(express.json());
-
+// Completed
+app.use("/api/hotels", hotelsRoute);
+// Todo: add the other routes here
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
-app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
+
+// Time: 31:30 Minutes
