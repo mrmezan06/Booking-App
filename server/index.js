@@ -22,6 +22,7 @@ app.listen(process.env.PORT, async () => {
 
 // Middlewares
 app.use(express.json());
+
 // Completed
 app.use("/api/hotels", hotelsRoute);
 // Todo: add the other routes here
@@ -29,4 +30,13 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/rooms", roomsRoute);
 
+// Error handler
+app.use((err, req, res, next) => {
+  res.status(err.status || 500).json({
+    success: false,
+    status: err.status || 500,
+    message: err.message || "Internal Server Error",
+    stack: err.stack,
+  });
+});
 // Time: 31:30 Minutes
