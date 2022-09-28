@@ -56,5 +56,3 @@ exports.login = async (req, res, next) => {
     next(error);
   }
 };
-
-// 58:50
