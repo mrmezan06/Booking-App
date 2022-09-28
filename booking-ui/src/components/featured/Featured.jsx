@@ -5,12 +5,12 @@ const Featured = () => {
   const { data, loading, error } = useFetch(
     "/hotels/countByCity?cities=Khulna,Dhaka,Rangpur"
   );
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="featured">
       {loading ? (
-        "Laoding..."
+        "Loading"
       ) : (
         <>
           <div className="featuredItem">
@@ -20,8 +20,8 @@ const Featured = () => {
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>{data[0].city}</h1>
-              <h2>{data[0].count} properties</h2>
+              <h1>{data[0]?.city}</h1>
+              <h2>{data[0]?.count} properties</h2>
             </div>
           </div>
           <div className="featuredItem">
@@ -31,8 +31,8 @@ const Featured = () => {
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>{data[1].city}</h1>
-              <h2>{data[1].count} properties</h2>
+              <h1>{data[1]?.city}</h1>
+              <h2>{data[1]?.count} properties</h2>
             </div>
           </div>
           <div className="featuredItem">
@@ -42,8 +42,8 @@ const Featured = () => {
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>{data[2].city}</h1>
-              <h2>{data[2].count} properties</h2>
+              <h1>{data[2]?.city}</h1>
+              <h2>{data[2]?.count} properties</h2>
             </div>
           </div>
         </>
