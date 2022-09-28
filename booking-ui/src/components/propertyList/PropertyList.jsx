@@ -37,3 +37,4 @@ const PropertyList = () => {
 export default PropertyList;
 
 // hotels  apartments  villas   resorts cabins
+// 1:38:00
